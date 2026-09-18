@@ -93,7 +93,7 @@ A Project record-triggered flow automatically manages the Active field based on 
 
 A Manager Approval Process is implemented for leave requests.
 
-Flow:
+Workflow:
 
 1. Employee submits a leave request
 2. Leave request enters Pending status
@@ -131,19 +131,19 @@ Error message:
 
 ### LeaveRequestController
 
-An Apex controller is used by the Leave Request Form LWC to create leave requests.
+An Apex controller used by the Leave Request Form LWC to create leave requests.
 
 ### MyLeaveHistoryController
 
-An Apex controller is used to retrieve leave history for the My Leave History component.
+An Apex controller used by the My Leave History component to retrieve leave history.
 
 ## Lightning Web Components
 
 ### Leave Request Form
 
-The Leave Request Form provides a custom interface for submitting leave requests.
+A custom Lightning Web Component for submitting leave requests.
 
-It includes:
+Features:
 
 - Employee selection
 - Leave Type selection
@@ -155,7 +155,7 @@ It includes:
 
 ### My Leave History
 
-The My Leave History component displays leave request information including:
+A Lightning Web Component that displays leave request information including:
 
 - Leave Request
 - Employee
@@ -184,10 +184,7 @@ Displays approved leave information and summarizes Days Applied for each employe
 
 ### Project Staffing Risk
 
-Identifies approved leaves that overlap with the employee's project duration and marks them as:
-
-- At Risk
-- No Risk
+Identifies approved leaves that overlap with the employee's project duration.
 
 ## Dashboard
 
@@ -202,6 +199,28 @@ Dashboard components include:
 - Employee Leave Balance
 - Project Staffing Risk
 
+## Screenshots
+
+### Leave Request Form
+
+![Leave Request Form](screenshots/01-leave-request-form.png)
+
+### My Leave History
+
+![My Leave History](screenshots/02-my-leave-history.png)
+
+### Manager Approval
+
+![Manager Approval](screenshots/03-manager-approval.png)
+
+### Leave Management Dashboard
+
+![Leave Management Dashboard](screenshots/04-leave-management-dashboard.png)
+
+### Project Staffing Risk
+
+![Project Staffing Risk](screenshots/05-project-staffing-risk.png)
+
 ## Technologies Used
 
 - Salesforce Platform
@@ -215,7 +234,8 @@ Dashboard components include:
 - Dashboards
 - Salesforce CLI
 - Visual Studio Code
-- Git & GitHub
+- Git
+- GitHub
 
 ## Project Structure
 
@@ -239,6 +259,7 @@ LeaveManagementSystem/
 │
 ├── config/
 ├── scripts/
+├── screenshots/
 ├── package.json
 ├── sfdx-project.json
 └── README.md
