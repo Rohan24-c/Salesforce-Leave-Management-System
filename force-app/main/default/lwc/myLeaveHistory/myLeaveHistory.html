@@ -1,0 +1,38 @@
+<template>
+    <lightning-card title="My Leave History" icon-name="standard:leave_plan">
+
+        <div class="slds-p-around_medium">
+
+            <template if:true={isLoading}>
+                <lightning-spinner
+                    alternative-text="Loading leave history">
+                </lightning-spinner>
+            </template>
+
+            <template if:true={hasRecords}>
+
+                <lightning-datatable
+                    key-field="Id"
+                    data={leaveRecords}
+                    columns={columns}
+                    hide-checkbox-column>
+                </lightning-datatable>
+
+            </template>
+
+            <template if:true={showNoRecords}>
+                <div class="slds-text-align_center slds-p-around_medium">
+                    <p>No leave history found.</p>
+                </div>
+            </template>
+
+            <template if:true={errorMessage}>
+                <div class="slds-text-color_error slds-p-around_medium">
+                    {errorMessage}
+                </div>
+            </template>
+
+        </div>
+
+    </lightning-card>
+</template>
